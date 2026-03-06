@@ -197,7 +197,7 @@ export function CustomerInfo() {
           <Calendar className="w-6 h-6 text-indigo-500" />
           개발 일정 (참고)
         </h2>
-        <p className="text-gray-600 mb-4">최소 개발기간 3개월입니다. 2명 개발 인력 기준 단일 디바이스 업데이트(기본)는 약 6인·월(3개월×2명), 대규모 카나리 배포가 포함될 경우 개발기간 4개월(약 8인·월)을 가정합니다.</p>
+        <p className="text-gray-600 mb-4">최소 개발기간 3개월입니다. 단일 디바이스 업데이트(기본)는 2명×3개월(약 6인·월), 대규모 카나리 배포 포함 시 3명×4개월(약 12인·월)을 가정합니다.</p>
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-200 rounded-lg">
             <thead className="bg-gray-50">
@@ -209,7 +209,7 @@ export function CustomerInfo() {
             <tbody className="divide-y divide-gray-200">
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">인력</td>
-                <td className="px-4 py-3 text-sm text-gray-600">2명</td>
+                <td className="px-4 py-3 text-sm text-gray-600">기본 2명 / 대규모 카나리 배포 시 3명</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">기간</td>
@@ -217,11 +217,11 @@ export function CustomerInfo() {
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">규모</td>
-                <td className="px-4 py-3 text-sm text-gray-600">기본 약 6인·월(2명×3개월) / 대규모 카나리 배포 시 8인·월(2명×4개월)</td>
+                <td className="px-4 py-3 text-sm text-gray-600">기본 약 6인·월(2명×3개월) / 대규모 카나리 배포 시 12인·월(3명×4개월)</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">비고</td>
-                <td className="px-4 py-3 text-sm text-gray-600">대규모·카나리 배포 포함 시 개발기간 4개월 가정</td>
+                <td className="px-4 py-3 text-sm text-gray-600">대규모·카나리 배포 포함 시 3명 4개월 가정</td>
               </tr>
             </tbody>
           </table>
