@@ -88,6 +88,19 @@ export function EtcRelated() {
         </div>
       </div>
 
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="flex items-start gap-3">
+          <Upload className="w-5 h-5 text-gray-700 mt-0.5" />
+          <div className="space-y-1">
+            <p className="font-semibold text-gray-900">안전한 전송·롤백</p>
+            <p className="text-sm text-gray-600">
+              AWS IoT Shadow로 디바이스 상태를 동기화하고 CloudFront CDN + HTTP Range(부분) 다운로드·재시도·이어받기, 체크섬 검증·자동 롤백을 통해
+              불안정한 네트워크 환경에서도 안전하게 펌웨어를 배포합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {items.map(({ title, desc, icon: Icon }) => (
           <div key={title} className="bg-white rounded-lg shadow-sm border border-gray-200 p-5">
