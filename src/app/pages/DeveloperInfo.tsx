@@ -150,7 +150,7 @@ export function DeveloperInfo() {
           <div className="space-y-4">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="font-medium text-gray-900 mb-2">1. 기본 다운로드</p>
-              <p className="text-sm text-gray-700">CloudFront TTL 설정으로 캐시된 URL/리소스를 통해 디바이스가 펌웨어 다운로드</p>
+              <p className="text-sm text-gray-700">CloudFront TTL 설정으로 캐시된 URL/리소스를 통해 디바이스가 펌웨어 다운로드, HTTP Range 헤더를 이용한 부분 다운로드·이어받기로 불안정한 네트워크에서도 안전하게 전송</p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4">
               <p className="font-medium text-gray-900 mb-2">2. URL 만료 시</p>

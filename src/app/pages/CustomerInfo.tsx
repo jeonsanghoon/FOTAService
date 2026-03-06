@@ -183,7 +183,7 @@ export function CustomerInfo() {
           </div>
           <div className="border-l-4 border-amber-400 pl-4 py-2">
             <h4 className="font-medium text-gray-900">Presigned URL 발급</h4>
-            <p className="text-sm text-gray-600">디바이스가 만료된 다운로드 URL 요청 시 Lambda가 S3 presigned URL 생성 후 반환</p>
+            <p className="text-sm text-gray-600">디바이스가 만료된 다운로드 URL 요청 시 Lambda가 S3 presigned URL 생성 후 반환, CloudFront CDN과 HTTP Range(부분) 다운로드 재시도로 안전하게 이어받기를 지원</p>
           </div>
           <div className="border-l-4 border-amber-400 pl-4 py-2">
             <h4 className="font-medium text-gray-900">로그·이벤트 수집</h4>
