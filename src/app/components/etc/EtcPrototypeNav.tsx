@@ -2,17 +2,14 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { useRef } from 'react';
 
 const tabs = [
-  { path: '/prototype/dashboard', label: '대시보드' },
-  { path: '/prototype/sso', label: 'SSO 연동' },
-  { path: '/prototype/customers', label: '고객 관리' },
-  { path: '/prototype/branches', label: '지사 관리' },
-  { path: '/prototype/users', label: '사용자 관리' },
-  { path: '/prototype/devices', label: '디바이스 목록' },
-  { path: '/prototype/updates', label: '업데이트 관리' },
-  { path: '/prototype/logs', label: '실시간 로그' },
+  { path: '/etc/prototype', label: '대시보드' },
+  { path: '/etc/prototype/sso', label: 'SSO 연동' },
+  { path: '/etc/prototype/devices', label: '디바이스 목록' },
+  { path: '/etc/prototype/updates', label: '업데이트 관리' },
+  { path: '/etc/prototype/logs', label: '실시간 로그' },
 ] as const;
 
-export function PrototypeNav() {
+export function EtcPrototypeNav() {
   const location = useLocation();
   const currentPath = location.pathname;
   const navigate = useNavigate();
@@ -59,15 +56,12 @@ export function PrototypeNav() {
     touchStartY.current = null;
 
     if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) {
-      // 수평 스와이프가 아니거나 이동이 너무 짧으면 무시
       return;
     }
 
     if (dx < 0) {
-      // 왼쪽으로 스와이프 → 다음 탭
       goToIndex(currentIndex + 1);
     } else {
-      // 오른쪽으로 스와이프 → 이전 탭
       goToIndex(currentIndex - 1);
     }
   };
@@ -80,9 +74,8 @@ export function PrototypeNav() {
       onKeyDown={handleKeyDown}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      aria-label="프로토타입 화면 탭 내비게이션"
+      aria-label="/etc 프로토타입 화면 탭 내비게이션"
     >
-      {/* 모바일: 한 줄 가로 스크롤 칩 (요즘 스타일) */}
       <div className="md:hidden pt-3 pb-3 -mx-4 px-4 overflow-x-auto scrollbar-none">
         <div className="flex gap-2 min-w-0">
           {tabs.map(({ path, label }) => (
@@ -99,7 +92,6 @@ export function PrototypeNav() {
         </div>
       </div>
 
-      {/* 데스크톱: 가로 탭 */}
       <div className="hidden md:block overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
         <div className="flex gap-x-4 sm:gap-x-6 gap-y-2 pt-4 sm:pt-6 min-w-0 flex-nowrap lg:flex-wrap">
           {tabs.map(({ path, label }) => (

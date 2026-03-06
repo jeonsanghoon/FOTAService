@@ -38,7 +38,7 @@ export function DeveloperInfo() {
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-900">디바이스 프로비저닝</td>
-                <td className="px-4 py-3 text-sm text-gray-600">별도 필요 — 디바이스 등록·인증·권한 관리 포함</td>
+                <td className="px-4 py-3 text-sm text-gray-600">별도 필요 — 디바이스 등록·인증 포함. 사용자 정보는 SSO 기준, 권한 동일·간단</td>
               </tr>
             </tbody>
           </table>
@@ -71,7 +71,7 @@ export function DeveloperInfo() {
               </li>
               <li className="flex items-start">
                 <span className="text-purple-600 mr-2">•</span>
-                <span><strong>취소 및 롤백:</strong> 진행 중인 Job 취소 및 이전 버전으로 롤백 지원</span>
+                <span><strong>취소 및 롤백:</strong> 진행 중인 Job 취소 및 이전 버전으로 롤백 지원 (업데이트별 이전 버전 복구 액션 제공)</span>
               </li>
             </ul>
           </div>

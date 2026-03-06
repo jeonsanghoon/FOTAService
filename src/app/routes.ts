@@ -11,6 +11,14 @@ import { PrototypeCustomerManage } from "./pages/prototype/CustomerManage";
 import { PrototypeBranchManage } from "./pages/prototype/BranchManage";
 import { PrototypeUserManage } from "./pages/prototype/UserManage";
 import { PrototypeSSOIntegration } from "./pages/prototype/SSOIntegration";
+import { EtcLayout } from "./components/etc/EtcLayout";
+import { EtcRelated } from "./pages/etc/Related";
+import { EtcPrototypeLayout } from "./pages/etc/PrototypeLayout";
+import { EtcUpdateManager } from "./pages/etc/EtcUpdateManager";
+import { EtcLogViewer } from "./pages/etc/EtcLogViewer";
+import { EtcPrototypeDashboard } from "./pages/etc/prototype/Dashboard";
+import { EtcPrototypeSSOIntegration } from "./pages/etc/prototype/SSOIntegration";
+import { EtcPrototypeDeviceList } from "./pages/etc/prototype/Devices";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +36,20 @@ export const router = createBrowserRouter([
       { path: "prototype/devices", Component: PrototypeDeviceList },
       { path: "prototype/updates", Component: PrototypeUpdateManager },
       { path: "prototype/logs", Component: PrototypeLogViewer },
+    ],
+  },
+  {
+    path: "/etc",
+    Component: EtcLayout,
+    children: [
+      { index: true, Component: EtcRelated },
+      { path: "prototype", Component: EtcPrototypeLayout, children: [
+        { index: true, Component: EtcPrototypeDashboard },
+        { path: "sso", Component: EtcPrototypeSSOIntegration },
+        { path: "devices", Component: EtcPrototypeDeviceList },
+        { path: "updates", Component: EtcUpdateManager },
+        { path: "logs", Component: EtcLogViewer },
+      ]},
     ],
   },
 ]);
