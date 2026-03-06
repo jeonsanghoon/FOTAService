@@ -3,15 +3,15 @@ import { CheckCircle, Upload, Users, Globe, Settings, Building2, MapPin, User, S
 export function CustomerInfo() {
   return (
     <div className="space-y-8">
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-lg p-8 text-white">
-        <h1 className="text-4xl font-bold mb-4">FOTA 업데이트 서비스</h1>
-        <p className="text-xl text-blue-100">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-lg p-4 sm:p-8 text-white">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">FOTA 업데이트 서비스</h1>
+        <p className="text-base sm:text-xl text-blue-100">
           Firmware Over-The-Air 업데이트 서비스로 디바이스 펌웨어를 안전하고 효율적으로 관리하세요.
         </p>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">서비스 개요</h2>
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">서비스 개요</h2>
         <div className="space-y-4">
           <div className="flex items-start">
             <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
@@ -30,9 +30,9 @@ export function CustomerInfo() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <LogIn className="w-6 h-6 text-indigo-500" />
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <LogIn className="w-6 h-6 text-indigo-500 flex-shrink-0" />
           타시스템 연동 · Cognito SSO 자동 로그인
         </h2>
         <p className="text-gray-600 mb-6">타시스템(기존 업무 시스템)에 FOTA 메뉴를 두고, Cognito SSO 인증을 통해 우리 FOTA 플랫폼에 자동 로그인되는 프로세스를 지원합니다.</p>
@@ -64,8 +64,8 @@ export function CustomerInfo() {
         </ul>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">주요 기능</h2>
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6">주요 기능</h2>
         
         <div className="space-y-6">
           <div className="border-l-4 border-blue-500 pl-4">
@@ -131,8 +131,8 @@ export function CustomerInfo() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">관리 기능</h2>
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-6">관리 기능</h2>
         <p className="text-gray-600 mb-6">고객·지사·사용자·디바이스를 체계적으로 관리할 수 있습니다.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start gap-4 p-4 rounded-lg border border-gray-200">
@@ -166,9 +166,9 @@ export function CustomerInfo() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Zap className="w-6 h-6 text-amber-500" />
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <Zap className="w-6 h-6 text-amber-500 flex-shrink-0" />
           서버리스 Lambda 처리 프로세스
         </h2>
         <p className="text-gray-600 mb-6">AWS Lambda를 활용해 업로드·배포·로그 수집 등을 서버 없이 처리합니다.</p>
@@ -192,9 +192,9 @@ export function CustomerInfo() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Calendar className="w-6 h-6 text-indigo-500" />
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <Calendar className="w-6 h-6 text-indigo-500 flex-shrink-0" />
           개발 일정 (참고)
         </h2>
         <p className="text-gray-600 mb-4">최소 개발기간 3개월입니다. 기본 약 6M (2명×3개월) / 대규모 카나리 배포 시 12M (3명×4개월)을 가정합니다.</p>

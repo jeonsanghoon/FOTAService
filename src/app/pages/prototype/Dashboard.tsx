@@ -92,8 +92,8 @@ export function PrototypeDashboard() {
       <PrototypeNav />
 
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">대시보드</h1>
-        <p className="text-gray-600">FOTA 업데이트 현황을 실시간으로 모니터링합니다</p>
+        <h1 className="text-xl sm:text-3xl font-bold text-gray-900 mb-2">대시보드</h1>
+        <p className="text-sm sm:text-base text-gray-600">FOTA 업데이트 현황을 실시간으로 모니터링합니다</p>
       </div>
 
       {/* 통계 카드 */}

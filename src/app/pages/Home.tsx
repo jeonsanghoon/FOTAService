@@ -4,19 +4,19 @@ import { FileText, Code, ArrowRight, Monitor } from 'lucide-react';
 export function Home() {
   return (
     <div className="space-y-8">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="text-center px-2">
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
           FOTA 업데이트 서비스 문서
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
           Firmware Over-The-Air 업데이트 서비스의 고객 홍보용 자료와 내부 개발 정보를 확인하실 수 있습니다.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
         <Link
           to="/customer"
-          className="group block p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-blue-500"
+          className="group block p-4 sm:p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-blue-500 min-h-0"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-blue-100 rounded-lg">
@@ -24,7 +24,7 @@ export function Home() {
             </div>
             <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
           </div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">고객 홍보용</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">고객 홍보용</h2>
           <p className="text-gray-600">
             FOTA 서비스의 주요 기능, 업데이트 유형, 사용자 중심의 기능 요구사항을 확인하세요.
           </p>
@@ -37,7 +37,7 @@ export function Home() {
 
         <Link
           to="/developer"
-          className="group block p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-green-500"
+          className="group block p-4 sm:p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-green-500 min-h-0"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-green-100 rounded-lg">
@@ -45,7 +45,7 @@ export function Home() {
             </div>
             <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-600 transition-colors" />
           </div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">내부 개발 정보</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">내부 개발 정보</h2>
           <p className="text-gray-600">
             AWS 아키텍처, 데이터베이스 구성, 기술적 구현 사항 등 개발 관련 상세 정보를 확인하세요.
           </p>
@@ -58,7 +58,7 @@ export function Home() {
 
         <Link
           to="/prototype/dashboard"
-          className="group block p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-purple-500"
+          className="group block p-4 sm:p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-purple-500 min-h-0"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="p-3 bg-purple-100 rounded-lg">
@@ -66,7 +66,7 @@ export function Home() {
             </div>
             <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors" />
           </div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">프로토타입</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">프로토타입</h2>
           <p className="text-gray-600">
             실제 작동하는 프로토타입 화면을 통해 FOTA 서비스의 기능을 직접 체험해보세요.
           </p>

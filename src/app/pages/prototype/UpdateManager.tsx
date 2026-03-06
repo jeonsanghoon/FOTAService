@@ -236,12 +236,12 @@ export function PrototypeUpdateManager() {
                     <Play className="w-4 h-4 text-gray-600" />
                   </button>
                 )}
-                <button className="p-2 hover:bg-gray-100 rounded transition-colors" title="상세보기">
+                <Link to="/prototype/logs" className="p-2 hover:bg-gray-100 rounded transition-colors inline-flex" title="상세보기 (실시간 로그 화면)">
                   <Eye className="w-4 h-4 text-gray-600" />
-                </button>
-                <button className="p-2 hover:bg-gray-100 rounded transition-colors" title="리포트 다운로드">
+                </Link>
+                <Link to="/prototype/logs" className="p-2 hover:bg-gray-100 rounded transition-colors inline-flex" title="리포트 다운로드 (로그 화면)">
                   <Download className="w-4 h-4 text-gray-600" />
-                </button>
+                </Link>
               </div>
             </div>
 

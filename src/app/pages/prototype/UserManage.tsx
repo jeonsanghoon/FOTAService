@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { PrototypeNav } from '../../components/prototype/PrototypeNav';
-import { Search, Plus, User, Mail, Shield, MoreHorizontal } from 'lucide-react';
+import { Search, Plus, User, Mail, Shield, MoreHorizontal, X } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function PrototypeUserManage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
 
   const users = [
     { id: 'U-001', name: '김관리', email: 'admin@abc.co.kr', role: 'admin', customer: 'ABC 전자', branch: '서울 본사', status: 'active', lastLogin: '2026-03-06 14:20' },
@@ -32,11 +34,59 @@ export function PrototypeUserManage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">사용자 관리</h1>
           <p className="text-gray-600">FOTA 콘솔 접근 사용자를 등록하고 권한을 관리합니다</p>
         </div>
-        <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+        <button
+          type="button"
+          onClick={() => setShowRegisterModal(true)}
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+        >
           <Plus className="w-4 h-4" />
           사용자 등록
         </button>
       </div>
+
+      {/* 사용자 등록 모달 */}
+      {showRegisterModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl max-w-md w-full shadow-xl max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between p-4 border-b">
+              <h3 className="text-lg font-semibold text-gray-900">사용자 등록</h3>
+              <button type="button" onClick={() => setShowRegisterModal(false)} className="p-2 rounded-lg hover:bg-gray-100">
+                <X className="w-5 h-5 text-gray-500" />
+              </button>
+            </div>
+            <form className="p-4 space-y-4" onSubmit={(e) => { e.preventDefault(); setShowRegisterModal(false); }}>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">이름</label>
+                <input type="text" placeholder="예: 김관리" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">이메일</label>
+                <input type="email" placeholder="예: admin@abc.co.kr" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">역할</label>
+                <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                  <option>관리자</option>
+                  <option>운영자</option>
+                  <option>조회자</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">소속 고객 / 지사</label>
+                <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                  <option>ABC 전자 / 서울 본사</option>
+                  <option>XYZ 산업 / 부산 지사</option>
+                  <option>123 기술 / 인천 공장</option>
+                </select>
+              </div>
+              <div className="flex gap-2 pt-2">
+                <button type="button" onClick={() => setShowRegisterModal(false)} className="flex-1 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">취소</button>
+                <button type="submit" className="flex-1 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">등록</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
         <div className="relative max-w-md">
@@ -52,7 +102,8 @@ export function PrototypeUserManage() {
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <table className="min-w-full divide-y divide-gray-200">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">이름</th>
@@ -88,13 +139,14 @@ export function PrototypeUserManage() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{u.lastLogin}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-right">
-                  <button className="text-blue-600 hover:text-blue-700 text-sm mr-2">권한 수정</button>
-                  <button className="p-1 rounded hover:bg-gray-200"><MoreHorizontal className="w-4 h-4 text-gray-500" /></button>
+                  <Link to="/prototype/users" className="text-blue-600 hover:text-blue-700 text-sm mr-2">권한 수정 (화면)</Link>
+                  <button type="button" className="p-1 rounded hover:bg-gray-200" aria-label="더보기"><MoreHorizontal className="w-4 h-4 text-gray-500" /></button>
                 </td>
               </tr>
             ))}
           </tbody>
-        </table>
+          </table>
+        </div>
       </div>
     </div>
   );

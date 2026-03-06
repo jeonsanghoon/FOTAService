@@ -136,14 +136,21 @@ export function PrototypeDeviceList() {
           <p className="text-gray-600">등록된 디바이스와 업데이트 상태를 관리합니다</p>
         </div>
         <div className="flex items-center gap-2">
-          <button className="flex items-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg transition-colors">
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="flex items-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg transition-colors"
+          >
             <RefreshCw className="w-4 h-4" />
             새로고침
           </button>
-          <button className="flex items-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg transition-colors">
+          <Link
+            to="/prototype/logs"
+            className="flex items-center gap-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg transition-colors"
+          >
             <Download className="w-4 h-4" />
-            내보내기
-          </button>
+            내보내기 (로그 화면)
+          </Link>
         </div>
       </div>
 

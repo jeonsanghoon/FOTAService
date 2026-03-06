@@ -14,8 +14,8 @@ export function PrototypeSSOIntegration() {
       <PrototypeNav />
 
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">타시스템 연동 · SSO 자동 로그인</h1>
-        <p className="text-gray-600">타시스템에 FOTA 메뉴를 두고, Cognito SSO를 통해 우리 FOTA 플랫폼에 자동 로그인되는 프로세스입니다.</p>
+        <h1 className="text-xl sm:text-3xl font-bold text-gray-900 mb-2">타시스템 연동 · SSO 자동 로그인</h1>
+        <p className="text-sm sm:text-base text-gray-600">타시스템에 FOTA 메뉴를 두고, Cognito SSO를 통해 우리 FOTA 플랫폼에 자동 로그인되는 프로세스입니다.</p>
       </div>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
