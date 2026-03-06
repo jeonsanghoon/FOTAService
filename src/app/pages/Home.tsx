@@ -71,9 +71,9 @@ export function Home() {
             실제 작동하는 프로토타입 화면을 통해 FOTA 서비스의 기능을 직접 체험해보세요.
           </p>
           <ul className="mt-4 space-y-2 text-sm text-gray-500">
+            <li>• 타시스템 연동 · SSO 자동 로그인</li>
             <li>• 실시간 대시보드</li>
-            <li>• 업데이트 관리 화면</li>
-            <li>• 디바이스 목록 및 로그 뷰어</li>
+            <li>• 업데이트 관리 · 디바이스 목록 및 로그 뷰어</li>
           </ul>
         </Link>
       </div>

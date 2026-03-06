@@ -1,4 +1,4 @@
-import { CheckCircle, Upload, Users, Globe, Settings, Building2, MapPin, User, Smartphone, Zap, Calendar } from 'lucide-react';
+import { CheckCircle, Upload, Users, Globe, Settings, Building2, MapPin, User, Smartphone, Zap, Calendar, LogIn, Shield } from 'lucide-react';
 
 export function CustomerInfo() {
   return (
@@ -28,6 +28,40 @@ export function CustomerInfo() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <LogIn className="w-6 h-6 text-indigo-500" />
+          타시스템 연동 · Cognito SSO 자동 로그인
+        </h2>
+        <p className="text-gray-600 mb-6">타시스템(기존 업무 시스템)에 FOTA 메뉴를 두고, Cognito SSO 인증을 통해 우리 FOTA 플랫폼에 자동 로그인되는 프로세스를 지원합니다.</p>
+        <div className="border border-gray-200 rounded-lg p-5 bg-gray-50 mb-6">
+          <p className="text-sm font-medium text-gray-700 mb-3">진입 흐름</p>
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            <span className="px-3 py-1.5 bg-white border border-gray-200 rounded">타시스템</span>
+            <span className="text-gray-400">→</span>
+            <span className="px-3 py-1.5 bg-amber-50 border border-amber-200 rounded">FOTA 메뉴 클릭</span>
+            <span className="text-gray-400">→</span>
+            <span className="px-3 py-1.5 bg-indigo-50 border border-indigo-200 rounded flex items-center gap-1"><Shield className="w-4 h-4" /> Cognito SSO 인증</span>
+            <span className="text-gray-400">→</span>
+            <span className="px-3 py-1.5 bg-green-50 border border-green-200 rounded">FOTA 플랫폼 자동 로그인</span>
+          </div>
+        </div>
+        <ul className="space-y-2 text-gray-600">
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span>타시스템에서 FOTA 전용 메뉴를 구성하면, 사용자가 해당 메뉴 클릭 시 FOTA 플랫폼 진입 URL로 이동합니다.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span>타시스템과 FOTA가 동일한 AWS Cognito 사용자 풀을 사용하므로, 이미 로그인된 경우 추가 로그인 없이 토큰 기반 SSO로 인증됩니다.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <span>인증 완료 후 우리 FOTA 플랫폼에 자동 로그인되어 대시보드·업데이트 관리 등 모든 기능을 바로 이용할 수 있습니다.</span>
+          </li>
+        </ul>
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
@@ -163,7 +197,7 @@ export function CustomerInfo() {
           <Calendar className="w-6 h-6 text-indigo-500" />
           개발 일정 (참고)
         </h2>
-        <p className="text-gray-600 mb-4">최소 개발기간 3개월, 목표 4개월 이내입니다. 2명 개발 인력 기준 단일 디바이스 업데이트(기본)는 약 6인·월(3개월×2명), 대규모 진행 시 약 9인·월(4.5개월×2명) 수준을 가정할 수 있습니다.</p>
+        <p className="text-gray-600 mb-4">최소 개발기간 3개월입니다. 2명 개발 인력 기준 단일 디바이스 업데이트(기본)는 약 6인·월(3개월×2명), 대규모 카나리 배포가 포함될 경우 개발기간 4개월(약 8인·월)을 가정합니다.</p>
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-200 rounded-lg">
             <thead className="bg-gray-50">
@@ -179,15 +213,15 @@ export function CustomerInfo() {
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">기간</td>
-                <td className="px-4 py-3 text-sm text-gray-600">최소 3개월, 목표 4개월 이내</td>
+                <td className="px-4 py-3 text-sm text-gray-600">최소 3개월 / 대규모 카나리 배포 시 4개월</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">규모</td>
-                <td className="px-4 py-3 text-sm text-gray-600">기본 약 6인·월(2명×3개월) / 대규모 시 약 9인·월(2명×4.5개월)</td>
+                <td className="px-4 py-3 text-sm text-gray-600">기본 약 6인·월(2명×3개월) / 대규모 카나리 배포 시 8인·월(2명×4개월)</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">비고</td>
-                <td className="px-4 py-3 text-sm text-gray-600">대규모 IoT Job·KDS 연동 등 요건 추가 시 9인·월 수준 가정</td>
+                <td className="px-4 py-3 text-sm text-gray-600">대규모·카나리 배포 포함 시 개발기간 4개월 가정</td>
               </tr>
             </tbody>
           </table>

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router';
 
 const tabs = [
   { path: '/prototype/dashboard', label: '대시보드' },
+  { path: '/prototype/sso', label: 'SSO 연동' },
   { path: '/prototype/customers', label: '고객 관리' },
   { path: '/prototype/branches', label: '지사 관리' },
   { path: '/prototype/users', label: '사용자 관리' },
