@@ -5,12 +5,12 @@ export function EtcRelated() {
   const items = [
     {
       title: '사용자 정보',
-      desc: 'SSO 로그인 사용자 정보 조회·표시. 권한은 동일하게 간단하게(역할 구분 없음)',
+      desc: 'SSO 로그인 사용자 정보 조회·표시',
       icon: User,
     },
     {
       title: '제품별 디바이스 정보',
-      desc: '제품 기준으로 디바이스 상태/버전/접속여부를 조회',
+      desc: '제품 기준으로 디바이스 상태·버전과 운영장비/비운영장비를 조회',
       icon: Smartphone,
     },
     {
@@ -33,9 +33,9 @@ export function EtcRelated() {
   return (
     <div className="space-y-6">
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-lg p-6 sm:p-8 text-white">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-3">FOTA Lite — 관련 내용</h1>
-        <p className="text-blue-100">
-          기존 화면은 유지하고, <span className="font-semibold text-white">/etc</span> 아래에만 요구하신 화면 구성을 분리해서 추가했습니다.
+        <h1 className="text-2xl sm:text-4xl font-bold mb-1">FOTA Lite 요약</h1>
+        <p className="text-blue-100 text-sm sm:text-base">
+          경량 FOTA 업데이트 서비스(FOTA Lite)의 범위, 화면 구성, 공수 정보를 한눈에 정리한 페이지입니다.
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export function EtcRelated() {
           <div className="space-y-1">
             <p className="font-semibold text-gray-900">범위 메모</p>
             <p className="text-sm text-gray-600">
-              고객관리/지사관리는 제외하고, <span className="font-medium">사용자 정보</span>는 SSO 로그인 사용자 기준으로 포함합니다. 권한은 동일하게 간단하게(역할 구분 없음) 적용합니다.
+              고객관리/지사관리는 제외하고, <span className="font-medium">사용자 정보</span>는 SSO 로그인 사용자 기준으로 포함합니다.
             </p>
           </div>
         </div>
@@ -70,16 +70,16 @@ export function EtcRelated() {
                     <td className="px-4 py-3 text-sm text-gray-600">1M (1명×1개월)</td>
                   </tr>
                   <tr>
+                    <td className="px-4 py-3 text-sm font-medium text-gray-700">공통 개발·환경 구성</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">1M (1명×1개월, 분석·설계와 병행)</td>
+                  </tr>
+                  <tr>
                     <td className="px-4 py-3 text-sm font-medium text-gray-700">개발·테스트</td>
                     <td className="px-4 py-3 text-sm text-gray-600">4M (2명×2개월)</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-3 text-sm font-medium text-gray-700">합계</td>
-                    <td className="px-4 py-3 text-sm text-gray-600">총 5M (최대 2명 투입 기준)</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-sm font-medium text-gray-700">비고</td>
-                    <td className="px-4 py-3 text-sm text-gray-600">대규모·카나리 배포는 범위 외이며, 필요 시 별도 산정</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">총 6M (최대 2명 투입 기준)</td>
                   </tr>
                 </tbody>
               </table>

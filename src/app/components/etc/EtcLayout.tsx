@@ -2,7 +2,7 @@ import { Outlet, Link, useLocation } from 'react-router';
 import { FileText, Monitor } from 'lucide-react';
 
 const navItems = [
-  { to: '/etc', label: '관련 내용', icon: FileText },
+  { to: '/etc', label: '요약', icon: FileText },
   { to: '/etc/prototype', label: '프로토타입', icon: Monitor },
 ] as const;
 

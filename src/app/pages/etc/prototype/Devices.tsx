@@ -9,16 +9,16 @@ interface DeviceRow {
   deviceId: string;
   name: string;
   firmware: string;
-  status: 'online' | 'offline';
+  status: 'operational' | 'non_operational';
   updateState: UpdateState;
   lastSeen: string;
 }
 
 const devices: DeviceRow[] = [
-  { product: 'IoT Sensor Pro', deviceId: 'DEV-2024-001247', name: 'Smart Sensor A', firmware: 'v2.4.1', status: 'online', updateState: 'completed', lastSeen: '2026-03-06 14:23:15' },
-  { product: 'IoT Sensor Pro', deviceId: 'DEV-2024-001248', name: 'Smart Sensor B', firmware: 'v2.3.5', status: 'online', updateState: 'in_progress', lastSeen: '2026-03-06 14:23:18' },
-  { product: 'Gateway V2', deviceId: 'DEV-2024-001249', name: 'Gateway Unit C', firmware: 'v2.4.0', status: 'online', updateState: 'queued', lastSeen: '2026-03-06 14:22:45' },
-  { product: 'Smart Controller', deviceId: 'DEV-2024-001250', name: 'Controller D', firmware: 'v2.3.0', status: 'offline', updateState: 'failed', lastSeen: '2026-03-06 11:15:30' },
+  { product: 'IoT Sensor Pro', deviceId: 'DEV-2024-001247', name: 'Smart Sensor A', firmware: 'v2.4.1', status: 'operational', updateState: 'completed', lastSeen: '2026-03-06 14:23:15' },
+  { product: 'IoT Sensor Pro', deviceId: 'DEV-2024-001248', name: 'Smart Sensor B', firmware: 'v2.3.5', status: 'operational', updateState: 'in_progress', lastSeen: '2026-03-06 14:23:18' },
+  { product: 'Gateway V2', deviceId: 'DEV-2024-001249', name: 'Gateway Unit C', firmware: 'v2.4.0', status: 'operational', updateState: 'queued', lastSeen: '2026-03-06 14:22:45' },
+  { product: 'Smart Controller', deviceId: 'DEV-2024-001250', name: 'Controller D', firmware: 'v2.3.0', status: 'non_operational', updateState: 'failed', lastSeen: '2026-03-06 11:15:30' },
 ];
 
 const updateBadge: Record<UpdateState, { label: string; className: string }> = {
@@ -70,7 +70,7 @@ export function EtcPrototypeDeviceList() {
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">제품정보</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">디바이스</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">펌웨어</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">접속</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">운영 여부</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">업데이트</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase">마지막 확인</th>
               </tr>
@@ -85,8 +85,12 @@ export function EtcPrototypeDeviceList() {
                   </td>
                   <td className="px-4 py-3 font-medium text-gray-900">{d.firmware}</td>
                   <td className="px-4 py-3">
-                    <span className={`inline-flex px-2 py-0.5 rounded text-xs font-medium ${d.status === 'online' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
-                      {d.status === 'online' ? '온라인' : '오프라인'}
+                    <span
+                      className={`inline-flex px-2 py-0.5 rounded text-xs font-medium ${
+                        d.status === 'operational' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
+                      }`}
+                    >
+                      {d.status === 'operational' ? '운영장비' : '비운영장비'}
                     </span>
                   </td>
                   <td className="px-4 py-3">

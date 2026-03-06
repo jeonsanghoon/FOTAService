@@ -81,8 +81,8 @@ export function PrototypeDeviceList() {
       offline: 'bg-gray-100 text-gray-800'
     };
     const labels = {
-      online: '온라인',
-      offline: '오프라인'
+      online: '운영장비',
+      offline: '비운영장비'
     };
     return (
       <span className={`px-2 py-1 rounded-full text-xs font-medium ${styles[status as keyof typeof styles]}`}>
@@ -170,9 +170,9 @@ export function PrototypeDeviceList() {
           <div className="flex items-center gap-2">
             <Filter className="w-5 h-5 text-gray-400" />
             <select className="border border-gray-300 rounded-lg px-3 py-2 text-sm">
-              <option>전체 상태</option>
-              <option>온라인</option>
-              <option>오프라인</option>
+              <option>전체 장비</option>
+              <option>운영장비</option>
+              <option>비운영장비</option>
             </select>
             <select className="border border-gray-300 rounded-lg px-3 py-2 text-sm">
               <option>전체 업체</option>
@@ -198,7 +198,7 @@ export function PrototypeDeviceList() {
           <div className="text-2xl font-bold text-gray-900">12,458</div>
         </div>
         <div className="bg-green-50 rounded-lg border border-green-200 p-4">
-          <div className="text-sm text-green-700 mb-1">온라인</div>
+          <div className="text-sm text-green-700 mb-1">운영장비</div>
           <div className="text-2xl font-bold text-green-900">11,203</div>
         </div>
         <div className="bg-blue-50 rounded-lg border border-blue-200 p-4">
@@ -206,7 +206,7 @@ export function PrototypeDeviceList() {
           <div className="text-2xl font-bold text-blue-900">638</div>
         </div>
         <div className="bg-red-50 rounded-lg border border-red-200 p-4">
-          <div className="text-sm text-red-700 mb-1">오프라인</div>
+          <div className="text-sm text-red-700 mb-1">비운영장비</div>
           <div className="text-2xl font-bold text-red-900">1,255</div>
         </div>
       </div>

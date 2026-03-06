@@ -153,7 +153,7 @@ export function CustomerInfo() {
             <User className="w-8 h-8 text-purple-600 flex-shrink-0 mt-0.5" />
             <div>
               <h3 className="font-semibold text-gray-900 mb-1">사용자 정보</h3>
-              <p className="text-sm text-gray-600">SSO 로그인 사용자 정보 조회·표시. 권한은 동일하게 간단하게(역할 구분 없음)</p>
+              <p className="text-sm text-gray-600"></p>
             </div>
           </div>
           <div className="flex items-start gap-4 p-4 rounded-lg border border-gray-200">
@@ -198,7 +198,7 @@ export function CustomerInfo() {
           개발 일정 (참고)
         </h2>
         <p className="text-gray-600 mb-4">
-          총 5M 규모로 예상하며, 분석·설계 1개월(1M) + 개발·테스트 2개월(4M, 최대 2명 투입)로 구성합니다.
+          총 6M 규모로 예상하며, 분석·설계 1개월(1M) + 공통 개발·환경 구성 1개월(1M, 병행) + 개발·테스트 2개월(4M, 최대 2명 투입)로 구성합니다.
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-200 rounded-lg">
@@ -214,16 +214,16 @@ export function CustomerInfo() {
                 <td className="px-4 py-3 text-sm text-gray-600">1M (1명×1개월)</td>
               </tr>
               <tr>
+                <td className="px-4 py-3 text-sm font-medium text-gray-700">공통 개발·환경 구성</td>
+                <td className="px-4 py-3 text-sm text-gray-600">1M (1명×1개월, 분석·설계와 병행)</td>
+              </tr>
+              <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">개발·테스트</td>
                 <td className="px-4 py-3 text-sm text-gray-600">4M (2명×2개월)</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 text-sm font-medium text-gray-700">합계</td>
-                <td className="px-4 py-3 text-sm text-gray-600">5M (최대 2명 투입 기준)</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3 text-sm font-medium text-gray-700">비고</td>
-                <td className="px-4 py-3 text-sm text-gray-600">대규모·카나리 배포는 범위 외이며, 필요 시 별도 산정</td>
+                <td className="px-4 py-3 text-sm text-gray-600">6M (최대 2명 투입 기준)</td>
               </tr>
             </tbody>
           </table>
